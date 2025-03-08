@@ -250,7 +250,7 @@ class Error():
 # Serve index.html for React Router (Handles all frontend routes)
 
 
-@app.api_route("/react-playground/{full_path:path}")
+@app.api_route("/{full_path:path}")
 async def serve_react_app(request: Request, full_path: str):
     # Serve the React app for any path under /react-playground
     print("Serving React app")
@@ -292,7 +292,7 @@ def frontend(build_dir="./build"):
     build_dir = pathlib.Path(frontend_dir)
 
     react = FastAPI(openapi_url="")
-    app.mount("/react-playground/", StaticFiles(directory=assets_dir, html=True), name="assets")
+    app.mount("/", StaticFiles(directory=assets_dir, html=True), name="assets")
 
     @react.get('/{path:path}')
     async def handle_catch_all(request: Request, path):
