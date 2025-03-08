@@ -4,7 +4,7 @@ import path from "path"
 import { defineConfig } from "vite"
 
 export default defineConfig({
-  base: "/react-playground",
+  base: "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
