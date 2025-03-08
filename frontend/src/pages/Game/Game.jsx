@@ -47,7 +47,7 @@ export default function Game() {
 
   useEffect(() => {
 
-    const socket = io(import.meta.env.VITE_API_URL, {
+    const socket = io('/', {
       transports: ['websocket'],
       withCredentials: false
     });
