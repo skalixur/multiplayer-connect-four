@@ -8,6 +8,7 @@ interface PlayerContextType {
   setPlayerId: (id: string) => void
   playerSymbol: string,
   setPlayerSymbol: (symbol: string) => void
+  clearPlayerData: () => void
 }
 
 export const PlayerContext = createContext<PlayerContextType | null>(null);

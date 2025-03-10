@@ -8,7 +8,7 @@ export default ({ children }) => {
   }
 
   return (
-    <main onContextMenu={onKeyPress} className="flex h-screen w-screen flex-col items-center justify-center">
+    <main onContextMenu={onKeyPress} className="flex h-screen w-screen flex-col items-center justify-center text-center">
       {children}
     </main>
   )
