@@ -28,7 +28,10 @@ export default function Home() {
   const onNameChange = (event) => setName(event.target.value)
 
   const sendJoinRoomRequest = async ({ code, name }) => {
-    const response = await API.post("join-room", { playerName: name, roomCode: code })
+    const response = await API.post("join-room", {
+      playerName: name,
+      roomCode: code,
+    })
     return response.data
   }
 
@@ -62,7 +65,9 @@ export default function Home() {
     }
 
     if (!code) {
-      toast(<WarningAlert>Enter a room code before joining a room!</WarningAlert>)
+      toast(
+        <WarningAlert>Enter a room code before joining a room!</WarningAlert>,
+      )
       return
     }
 
@@ -94,7 +99,11 @@ export default function Home() {
         <div className="flex flex-col justify-center sm:flex-row items-center h-full gap-5">
           <RoomCreate onRoomCreateClick={onRoomCreateClick} />
           <SeparatorWithText>or</SeparatorWithText>
-          <RoomJoin code={code} onRoomJoinClick={onRoomJoinClick} onCodeChange={onCodeChange} />
+          <RoomJoin
+            code={code}
+            onRoomJoinClick={onRoomJoinClick}
+            onCodeChange={onCodeChange}
+          />
         </div>
       </section>
       <div className="absolute right-5 bottom-5">

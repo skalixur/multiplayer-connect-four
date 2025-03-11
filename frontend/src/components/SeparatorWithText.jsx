@@ -1,4 +1,4 @@
-import { Separator } from "@radix-ui/react-dropdown-menu";
+import { Separator } from "@radix-ui/react-dropdown-menu"
 
 export function SeparatorWithText({ children }) {
   return (

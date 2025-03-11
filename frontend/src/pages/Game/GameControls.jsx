@@ -16,19 +16,26 @@ export function GameControls({ onRematchClick, onLeaveRoomClick }) {
   }
 
   function onLeaveRoomClickHandler() {
-    navigate('/')
+    navigate("/")
     onLeaveRoomClick()
   }
 
   return (
     <div className="flex gap-4 w-[50%] items-center justify-center">
-      {gameOverState &&
+      {gameOverState && (
         <Button onClick={onRematchClickHandler}>
-          {isRematchRequested ? <Ellipsis className="animate-pulse" /> : <RotateCcw />}
+          {isRematchRequested ? (
+            <Ellipsis className="animate-pulse" />
+          ) : (
+            <RotateCcw />
+          )}
           {isRematchRequested ? "Cancel rematch" : "Rematch"}
         </Button>
-      }
-      <Button onClick={onLeaveRoomClickHandler} variant="outline"><DoorOpen />Leave Room</Button>
+      )}
+      <Button onClick={onLeaveRoomClickHandler} variant="outline">
+        <DoorOpen />
+        Leave Room
+      </Button>
     </div>
-  );
+  )
 }

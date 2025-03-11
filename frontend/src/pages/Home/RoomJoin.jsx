@@ -1,7 +1,7 @@
-import { TypographyH3 } from "@/components/ui/typography";
-import GameStartControl from "./GameStartControl";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { TypographyH3 } from "@/components/ui/typography"
+import GameStartControl from "./GameStartControl"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 
 export default ({ code, onCodeChange, onRoomJoinClick }) => (
   <GameStartControl label={<TypographyH3>Join a room</TypographyH3>}>
@@ -14,7 +14,8 @@ export default ({ code, onCodeChange, onRoomJoinClick }) => (
         onChange={onCodeChange}
         onKeyDown={(event) => event.key === "Enter" && onRoomJoinClick(event)}
         placeholder="Enter the code"
-        maxLength={4} />
+        maxLength={4}
+      />
     </div>
   </GameStartControl>
-);
+)

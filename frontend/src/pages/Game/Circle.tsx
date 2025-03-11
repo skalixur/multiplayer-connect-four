@@ -1,4 +1,3 @@
-
 export default function Circle({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 100 100">
@@ -11,7 +10,13 @@ export default function Circle({ className }: { className?: string }) {
 
       <circle cx="50" cy="50" r="45" className={className} />
 
-      <circle cx="50" cy="50" r="45" fill="url(#invertedShadow)" opacity="0.5" />
+      <circle
+        cx="50"
+        cy="50"
+        r="45"
+        fill="url(#invertedShadow)"
+        opacity="0.5"
+      />
     </svg>
   )
 }
